@@ -43,10 +43,10 @@ namespace ElevenNote.Services
                         .Where(e => e.OwnerId == _userId)
                         .Select(
                             e =>
-                                new NoteListItem
+                                new CategoryListItem
                                 {
-                                    NoteId = e.NoteId,
-                                    Title = e.Title,
+                                    CategoryId = e.CategoryId,
+                                    Name = e.Name,
                                     CreatedUtc = e.CreatedUtc
                                 }
                         );
