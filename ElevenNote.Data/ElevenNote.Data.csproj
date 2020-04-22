@@ -86,13 +86,17 @@
   <ItemGroup>
     <Compile Include="Category.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202004220059485_InitialCreate.cs" />
-    <Compile Include="Migrations\202004220059485_InitialCreate.Designer.cs">
-      <DependentUpon>202004220059485_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202004220121453_initialMigration.cs" />
+    <Compile Include="Migrations\202004220121453_initialMigration.Designer.cs">
+      <DependentUpon>202004220121453_initialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004220107361_initialMigration.cs" />
-    <Compile Include="Migrations\202004220107361_initialMigration.Designer.cs">
-      <DependentUpon>202004220107361_initialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202004220137345_removedFK.cs" />
+    <Compile Include="Migrations\202004220137345_removedFK.Designer.cs">
+      <DependentUpon>202004220137345_removedFK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004220138599_removedColumns.cs" />
+    <Compile Include="Migrations\202004220138599_removedColumns.Designer.cs">
+      <DependentUpon>202004220138599_removedColumns.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
@@ -103,11 +107,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202004220059485_InitialCreate.resx">
-      <DependentUpon>202004220059485_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004220121453_initialMigration.resx">
+      <DependentUpon>202004220121453_initialMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004220107361_initialMigration.resx">
-      <DependentUpon>202004220107361_initialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004220137345_removedFK.resx">
+      <DependentUpon>202004220137345_removedFK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004220138599_removedColumns.resx">
+      <DependentUpon>202004220138599_removedColumns.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

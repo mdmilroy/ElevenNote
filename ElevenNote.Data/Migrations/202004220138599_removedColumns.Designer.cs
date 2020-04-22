@@ -7,13 +7,13 @@ namespace ElevenNote.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class initialMigration : IMigrationMetadata
+    public sealed partial class removedColumns : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initialMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(removedColumns));
         
         string IMigrationMetadata.Id
         {
-            get { return "202004220107361_initialMigration"; }
+            get { return "202004220138599_removedColumns"; }
         }
         
         string IMigrationMetadata.Source
