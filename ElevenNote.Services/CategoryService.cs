@@ -23,7 +23,6 @@ namespace ElevenNote.Services
                 {
                     OwnerId = _userId,
                     Name = model.Name,
-                    CreatedUtc = DateTimeOffset.Now
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -47,7 +46,6 @@ namespace ElevenNote.Services
                                 {
                                     CategoryId = e.CategoryId,
                                     Name = e.Name,
-                                    CreatedUtc = e.CreatedUtc
                                 }
                         );
 
@@ -62,14 +60,12 @@ namespace ElevenNote.Services
                 var entity =
                     ctx
                         .Categories
-                        .Single(e => e.CategoryId == id && e.OwnerId == _userId);
+                        .Single(e => e.CategoryId == id);
                 return
                     new CategoryDetail
                     {
                         CategoryId = entity.CategoryId,
                         Name = entity.Name,
-                        CreatedUtc = entity.CreatedUtc,
-                        ModifiedUtc = entity.ModifiedUtc
                     };
             }
         }
@@ -81,10 +77,9 @@ namespace ElevenNote.Services
                 var entity =
                     ctx
                         .Categories
-                        .Single(e => e.CategoryId == model.CategoryId && e.OwnerId == _userId);
+                        .Single(e => e.CategoryId == model.CategoryId);
 
                 entity.Name = model.Name;
-                entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
             }
@@ -97,7 +92,7 @@ namespace ElevenNote.Services
                 var entity =
                     ctx
                         .Categories
-                        .Single(e => e.CategoryId == categoryId && e.OwnerId == _userId);
+                        .Single(e => e.CategoryId == categoryId);
 
                 ctx.Categories.Remove(entity);
 
