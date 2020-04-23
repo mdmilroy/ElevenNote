@@ -22,8 +22,8 @@ namespace ElevenNote.Data
         [Required]
         public string Content { get; set; }
 
-        //[ForeignKey("Category")]
-        public Category NoteCategory { get; set; }
+        [ForeignKey("Category")]
+        public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
 
 
